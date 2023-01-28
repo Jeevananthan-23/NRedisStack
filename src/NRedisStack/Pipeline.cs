@@ -16,7 +16,10 @@ public class Pipeline
         _batch.Execute();
     }
 
-    public IJsonCommandsAsync Json => new JsonCommandsAsync(_batch);
+    public IJsonCommandsAsync Json => new JsonCommandsAsync(_batch); // Json
+
+    public  ISearchCommandsAsync Search => new SearchCommandsAsync(_batch); //search 
+
 
     public IDatabaseAsync Db => _batch;
 }
